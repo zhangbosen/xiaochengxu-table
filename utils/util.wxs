@@ -1,0 +1,32 @@
+//日期格式化
+var formatTime = function (stamp) {
+  stamp = +stamp;
+  var weeks = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  var mons = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  
+  var d = getDate(stamp).toString();
+  var temp = d.split(" ");
+
+  
+  //确定月份
+  var curM;
+  for (var i = 0; i < mons.length; i++) {
+    if (temp[1] == mons[i]) {
+      curM = i + 1;
+      if(curM.toString().length == 1) {
+        curM = '0' + curM
+      }
+      break;
+    }
+  }
+
+  var dateArr = [(temp[3] + "-" + curM + "-" + temp[2]), temp[4]];
+  return dateArr.join(' ');
+}
+
+
+
+
+module.exports = {
+  formatTime: formatTime,
+}

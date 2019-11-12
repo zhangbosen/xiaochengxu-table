@@ -1,0 +1,27 @@
+<wxs module="util" src="../../utils/util.wxs"></wxs>
+<view class='con'>
+  <scroll-view class="scroll" scroll-x="true">
+    <view class="table_header">
+      <view class="th">报警时间</view>
+      <view class="th w200">报警源</view>
+      <view class="th">报警代码</view>
+      <view class="th w200">报警级别</view>
+      <view class="th">报警信息</view>
+      <view class="th">设备标识</view>
+      <view class="th">设备名称</view>
+      <view class="th">设备型号</view>
+    </view>
+
+    <view class="table_cell" wx:for="{{alarms}}">
+      <view class="td">{{util.formatTime(item.event_date)}}</view>
+      <view class="td w200">{{item.event_data.source}}</view>
+      <view class="td">{{item.event_data.type}}</view>
+      <view class="td w200">{{item.event_data.level}}</view>
+      <view class="td ofs">{{item.event_data.message}}</view>
+      <view class="td">{{item.did}}</view>
+      <view class="td">{{item.devName}}</view>
+      <view class="td">{{item.specToken}}</view>
+    </view>
+    
+  </scroll-view>
+</view>

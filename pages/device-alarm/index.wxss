@@ -1,0 +1,44 @@
+.con{
+  box-sizing: border-box;
+  width:98%;
+  margin-left: 1%;
+}
+.scroll {
+  white-space: nowrap; 
+  display: flex; 
+  border: 1px solid #e8eaec;
+  border-right: 0;
+  border-bottom: 0;
+}
+.scroll .table_cell {
+  height: 80rpx;
+}
+.scroll .th, .scroll .td {
+  box-sizing: border-box;
+  background: #f8f8f9; 
+  width: 400rpx; 
+  height: 80rpx;  
+  line-height: 80rpx;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #e8eaec;
+  border-top: 0;
+  border-left: 0;
+  padding: 0 20rpx;
+}
+.scroll .td {
+  background: #fff;
+  overflow: hidden;
+  color: #515a6e;
+  font-size: 30rpx;
+}
+.td.ofs {
+  overflow-x: scroll;
+}
+
+.w200 {
+  width: 200rpx !important;
+}
+.w300 {
+  width: 300rpx !important;
+}
